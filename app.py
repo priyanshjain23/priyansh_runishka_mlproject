@@ -10,9 +10,9 @@ model = pickle.load(open('mlproject.pkl', 'rb'))
 st.title('Will the user churn or not ') 
 
 #Range of paramenters
-TotalCharges  = st.slider("TotalCharges ",0.00,200.76)
-tenure = st.slider("tenure",0.000,0.200,step=0.001,format="%.3f")
-MonthlyCharges = st.slider("MonthlyCharges",0.00,15000.00)
+TotalCharges  = st.slider("TotalCharges ",0.00,1800.76)
+tenure = st.slider("tenure",0.000,200,step=10,format="%.3f")
+MonthlyCharges = st.slider("MonthlyCharges",0.00,1500.00)
 # ProductRelated = st.slider("ProductRelated",0,200)
 
 #Pridiction function
