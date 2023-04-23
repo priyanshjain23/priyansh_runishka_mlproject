@@ -11,13 +11,13 @@ st.title('Will the user churn or not ')
 
 #Range of paramenters
 TotalCharges  = st.slider("TotalCharges ",0.00,200.76)
-Tenure = st.slider("Tenure",0.000,0.200,step=0.001,format="%.3f")
+tenure = st.slider("tenure",0.000,0.200,step=0.001,format="%.3f")
 MonthlyCharges = st.slider("MonthlyCharges",0.00,15000.00)
 # ProductRelated = st.slider("ProductRelated",0,200)
 
 #Pridiction function
 def predict():
-    float_features = [float(x) for x in [TotalCharges, Tenure, MonthlyCharges]]
+    float_features = [float(x) for x in [TotalCharges, tenure, MonthlyCharges]]
     final_features = [np.array(float_features)]
     prediction = model.predict(final_features)
     label = prediction[0]
