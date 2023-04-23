@@ -11,7 +11,7 @@ st.title('Will the user churn or not ')
 
 #Range of paramenters
 TotalCharges  = st.slider("TotalCharges ",0.00,1800.76)
-tenure = st.slider("tenure",0.000,200.01,step=10.01,format="%.3f")
+tenure = st.slider("tenure",0.000,200.01,step=1.01,format="%.3f")
 MonthlyCharges = st.slider("MonthlyCharges",0.00,1500.00)
 # ProductRelated = st.slider("ProductRelated",0,200)
 
