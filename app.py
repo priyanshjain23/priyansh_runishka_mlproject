@@ -26,7 +26,7 @@ def predict():
     print(label)
 
 #Printing the output 
-    if(int(label)==0):
+    if(int(label)==1):
         st.success('Hureyyyy!! The user will not churn '  + ' :thumbsup:')
     else:
         st.success('Ohhh The user will churn '  + ' :thumbsup:')
