@@ -10,14 +10,14 @@ model = pickle.load(open('mlproject.pkl', 'rb'))
 st.title('Will the user churn or not ') 
 
 #Range of paramenters
-TotalCharges  = st.slider("TotalCharges ",0.00,1800.76)
-tenure = st.slider("tenure",0.000,200.01,step=1.01,format="%.3f")
-MonthlyCharges = st.slider("MonthlyCharges",0.00,1500.00)
+TotalCharges  = st.slider("TotalCharges ",0.00,2800.76)
+tenure = st.slider("tenure",0.000,100.01,step=1.01,format="%.3f")
+MonthlyCharges = st.slider("MonthlyCharges",0.00,2500.00)
 # ProductRelated = st.slider("ProductRelated",0,200)
 
 #Pridiction function
 def predict():
-    float_features = [float(x) for x in [TotalCharges, tenure, MonthlyCharges]]
+    float_features = [float(X) for x in [TotalCharges, tenure, MonthlyCharges]]
     final_features = [np.array(float_features)]
     prediction = model.predict(final_features)
     label = prediction[0]
