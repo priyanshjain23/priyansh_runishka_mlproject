@@ -17,7 +17,7 @@ MonthlyCharges = st.slider("MonthlyCharges",0.00,2500.00)
 
 #Pridiction function
 def predict():
-    float_features = [float(X) for x in [TotalCharges, tenure, MonthlyCharges]]
+    float_features = [float(X) for X in [TotalCharges, tenure, MonthlyCharges]]
     final_features = [np.array(float_features)]
     prediction = model.predict(final_features)
     label = prediction[0]
