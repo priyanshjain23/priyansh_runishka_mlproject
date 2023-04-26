@@ -19,7 +19,7 @@ PaymentMethod = st.slider("PaymentMethod",0.00,10.00)
 
 #Pridiction function
 def predict():
-    float_features = [float(X) for X in [TotalCharges, tenure, MonthlyCharges]]
+    float_features = [float(X) for X in [TotalCharges, tenure, MonthlyCharges,Contract,PaymentMethod]]
     final_features = [np.array(float_features)]
     prediction = model.predict(final_features)
     label = prediction[0]
