@@ -12,9 +12,9 @@ st.title('Will the user churn or not ')
 #Range of paramenters
 TotalCharges  = st.slider("TotalCharges ",0.00,2800.76)
 tenure = st.slider("tenure",0.000,100.01,step=0.0001,format="%.3f")
-MonthlyCharges = st.slider("MonthlyCharges",0,2500)
-Contract = st.slider("Contract",0,100.00)
-PaymentMethod = st.slider("PaymentMethod",0,10.00)
+MonthlyCharges = st.slider("MonthlyCharges",0.0,2500,0)
+Contract = st.slider("Contract",0,0,100.0)
+PaymentMethod = st.slider("PaymentMethod",0.0,10.0)
 # ProductRelated = st.slider("ProductRelated",0,200)
 
 #Pridiction function
