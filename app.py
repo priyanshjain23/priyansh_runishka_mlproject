@@ -14,12 +14,12 @@ TotalCharges  = st.slider("TotalCharges ",0.00,2800.76)
 tenure = st.slider("tenure",0.000,100.01,step=0.0001,format="%.3f")
 MonthlyCharges = st.slider("MonthlyCharges",0.00,2500.0)
 Contract = st.slider("Contract",0.00,100.00)
-PaymentMethod = st.slider("PaymentMethod",0.00,10.00)
+# PaymentMethod = st.slider("PaymentMethod",0.00,10.00)
 # ProductRelated = st.slider("ProductRelated",0,200)
 
 #Pridiction function
 def predict():
-    float_features = [float(X) for X in [TotalCharges, tenure, MonthlyCharges,Contract,PaymentMethod]]
+    float_features = [float(X) for X in [TotalCharges, tenure, MonthlyCharges,Contract]]
     final_features = [np.array(float_features)]
     prediction = model.predict(final_features)
     label = prediction[0]
