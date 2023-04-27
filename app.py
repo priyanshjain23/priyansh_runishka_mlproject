@@ -13,7 +13,7 @@ st.title('Will the User Churn or Not ')
 TotalCharges  = st.slider("TotalCharges ",0,2800)
 tenure = st.slider("tenure",0,100,format="%.3f")
 MonthlyCharges = st.slider("MonthlyCharges",0,2500)
-Contract = st.slider("Contract",0.00,100.00)
+Contract = st.slider("Contract",0,100)
 # PaymentMethod = st.slider("PaymentMethod",0.00,10.00)
 # ProductRelated = st.slider("ProductRelated",0,200)
 
